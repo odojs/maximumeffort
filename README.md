@@ -22,3 +22,19 @@ self.addEventListener('message', function (e) {
 ```
 
 `maximumeffort(url, maxWorkers (optional))`
+
+Better worker:
+```js
+var hub = require('odo-hub');
+hub = hub()
+hub.every('eventname', function (p, cb) {
+    cb();
+    post = function() {
+        self.postMessage('finished');
+    }
+    setTimeout(post, 2000);
+})
+self.addEventListener('message', function (e) {
+    hub.emit(e.event, e.payload);
+});
+```
