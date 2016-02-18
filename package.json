@@ -1,6 +1,6 @@
 {
   "name": "maximumeffort",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dispatch tasks to Web Workers",
   "main": "index.js",
   "scripts": {
